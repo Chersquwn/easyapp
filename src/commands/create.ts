@@ -3,6 +3,7 @@ import ora from 'ora'
 import path from 'path'
 import generate from '../utils/generate'
 import download from '../utils/download'
+import install from '../utils/install'
 import {
   isSafeDirectory,
   isValidPackageName,
@@ -21,6 +22,10 @@ async function create(name: string): Promise<void> {
 
   const root = path.resolve(name)
   const { template, ...projectInfo } = await getProjectInfo(name)
+
+  console.log()
+  console.log()
+
   const spinner = ora('Downloading please wait...')
 
   spinner.start()
@@ -37,7 +42,13 @@ async function create(name: string): Promise<void> {
 
   generate(name, projectInfo)
 
-  spinner.stop()
+  spinner.succeed(`${green('Template download successfully!')}`)
+
+  spinner.start('Installing packages. This might take a couple of minutes.')
+
+  await install(name)
+
+  spinner.succeed(`${green('All packages installed successfully!')}`)
 
   console.log()
   console.log(green(`Success! Created ${name} at ${root}`))

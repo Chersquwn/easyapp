@@ -25,6 +25,7 @@ const ora_1 = __importDefault(require("ora"));
 const path_1 = __importDefault(require("path"));
 const generate_1 = __importDefault(require("../utils/generate"));
 const download_1 = __importDefault(require("../utils/download"));
+const install_1 = __importDefault(require("../utils/install"));
 const utils_1 = require("../utils");
 const { red, green } = chalk_1.default;
 function create(name) {
@@ -36,6 +37,8 @@ function create(name) {
             process.exit(1);
         const root = path_1.default.resolve(name);
         const _a = yield utils_1.getProjectInfo(name), { template } = _a, projectInfo = __rest(_a, ["template"]);
+        console.log();
+        console.log();
         const spinner = ora_1.default('Downloading please wait...');
         spinner.start();
         try {
@@ -47,7 +50,10 @@ function create(name) {
             process.exit(1);
         }
         generate_1.default(name, projectInfo);
-        spinner.stop();
+        spinner.succeed(`${green('Template download successfully!')}`);
+        spinner.start('Installing packages. This might take a couple of minutes.');
+        yield install_1.default(name);
+        spinner.succeed(`${green('All packages installed successfully!')}`);
         console.log();
         console.log(green(`Success! Created ${name} at ${root}`));
         console.log();
