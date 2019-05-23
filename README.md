@@ -25,7 +25,7 @@ example:
 $ easyapp create library
 ```
 
-# Commands
+## Commands
 
 ```bash
 Commands:
@@ -34,3 +34,7 @@ Commands:
 Options:
   -v, --version           Show version number
 ```
+
+## License
+
+[licensed as MIT](https://github.com/Chersquwn/easyapp/blob/master/LICENSE).
