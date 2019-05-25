@@ -149,6 +149,12 @@ function getQuestion(name) {
             message: 'Please select a template for the project',
             choices,
             default: choices[0]
+        },
+        {
+            type: 'confirm',
+            name: 'confirm',
+            message: 'Is this ok?',
+            default: true
         }
     ];
 }
