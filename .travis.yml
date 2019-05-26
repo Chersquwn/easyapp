@@ -8,5 +8,5 @@ cache:
 install:
   - yarn --frozen-lockfile --non-interactive
 
-scripts:
+script:
   - yarn build
