@@ -9,4 +9,4 @@ install:
   - yarn --frozen-lockfile --non-interactive
 
 scripts:
-  - yarn test
+  - yarn build
