@@ -1,4 +1,8 @@
 # easyapp
+[![Build Status](https://travis-ci.org/Chersquwn/easyapp.svg?branch=master)](https://travis-ci.org/Chersquwn/easyapp)
+![npm (scoped)](https://img.shields.io/npm/v/@chersquwn/easyapp.svg?style=flat-square)
+![GitHub](https://img.shields.io/github/license/Chersquwn/easyapp.svg?style=flat-square)
+
 A quick cli for create project
 
 ## Install

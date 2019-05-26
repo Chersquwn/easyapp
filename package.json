@@ -1,5 +1,5 @@
 {
-  "name": "easyapp",
+  "name": "@chersquwn/easyapp",
   "version": "0.1.0",
   "description": "A quick cli for create project",
   "main": "dist/index.js",
