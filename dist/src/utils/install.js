@@ -11,6 +11,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
 const npm_check_updates_1 = __importDefault(require("npm-check-updates"));
 const cross_spawn_1 = __importDefault(require("cross-spawn"));
 const path_1 = __importDefault(require("path"));

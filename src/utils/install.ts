@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
 import ncu from 'npm-check-updates'
 import spawn from 'cross-spawn'
 import path from 'path'

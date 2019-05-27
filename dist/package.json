@@ -1,11 +1,10 @@
 {
-    "name": "easyapp",
+    "name": "@chersquwn/easyapp",
     "version": "0.1.0",
     "description": "A quick cli for create project",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc",
         "preversion": "npm run build && git add dist"
     },

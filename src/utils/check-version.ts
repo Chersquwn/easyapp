@@ -18,7 +18,7 @@ export function checkNodeVersion(): void {
 export function checkPackageVersion(): void {
   try {
     const { body } = request.get(NPM_REGISTER_URL + name, { json: true })
-    const latestVersion = JSON.parse(body)['dist-tags'].latest
+    const latestVersion = JSON.parse(body.toString())['dist-tags'].latest
 
     if (semver.lt(version, latestVersion)) {
       console.log(yellow(`    A newer version for ${name} is available.`))
