@@ -841,10 +841,10 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
-eslint-config-chersquwn@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-chersquwn/-/eslint-config-chersquwn-1.2.2.tgz#8ee2c53880551d0b21285d6f6d127a00da6becbf"
-  integrity sha512-hhS3W/NSg0ylD4e8Ipm9/ZxqYz2C4bxX2+QU8Ej4MYHezvwhhSEq91Bb4D0zvKdcmO4+sFi39c57K5vQV4TLLw==
+eslint-config-chersquwn@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/eslint-config-chersquwn/-/eslint-config-chersquwn-1.2.3.tgz#84c61e7f14e630c39bbf103ab408589cf77d747c"
+  integrity sha512-kB0tmELPDH3gMXKBtr0WDHrD/HDrSohx02f39f0u7UI6lAgBzJT5nyBkTD5cUSEkY6cbgUjSDWnge+I6gulbzA==
 
 eslint-config-prettier@^4.3.0:
   version "4.3.0"
