@@ -14,6 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const commander_1 = __importDefault(require("commander"));
 const package_json_1 = require("./package.json");
 const create_1 = __importDefault(require("./src/commands/create"));
+const list_1 = __importDefault(require("./src/commands/list"));
 const check_version_1 = require("./src/utils/check-version");
 check_version_1.checkNodeVersion();
 commander_1.default
@@ -22,6 +23,11 @@ commander_1.default
     .description('create project')
     .action((name) => __awaiter(this, void 0, void 0, function* () {
     yield create_1.default(name);
+}))
+    .command('list')
+    .description('list templates')
+    .action(() => __awaiter(this, void 0, void 0, function* () {
+    yield list_1.default();
 }));
 commander_1.default.parse(process.argv);
 if (commander_1.default.args.length < 1) {
