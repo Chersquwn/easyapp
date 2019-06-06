@@ -13,6 +13,8 @@ program
   .action(async (name: string) => {
     await create(name)
   })
+
+program
   .command('list')
   .description('list templates')
   .action(async () => {

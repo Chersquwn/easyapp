@@ -23,7 +23,8 @@ commander_1.default
     .description('create project')
     .action((name) => __awaiter(this, void 0, void 0, function* () {
     yield create_1.default(name);
-}))
+}));
+commander_1.default
     .command('list')
     .description('list templates')
     .action(() => __awaiter(this, void 0, void 0, function* () {

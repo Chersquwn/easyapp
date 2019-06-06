@@ -8,21 +8,27 @@ interface ListItem {
 }
 
 async function list(): Promise<void> {
-  const { data } = await request.get(
-    'https://api.github.com/users/yokiyokiyoki/repos'
+  const data = await request.get(
+    'https://api.github.com/users/Chersquwn/repos',
+    {
+      headers: {
+        'User-Agent': 'Awesome-Octocat-App'
+      },
+      json: true
+    }
   )
 
-  const list = data.filter(async (item: ListItem) =>
+  const list = data.filter((item: ListItem) =>
     item.name.includes('easyapp-template')
   )
 
   console.log()
-  console.log(`Easyapp has ${list.length} templates: `)
+  console.log(`easyapp has ${cyan(list.length)} templates: `)
   console.log()
 
   list.forEach(
     (item: ListItem, index: number): void => {
-      console.log(`${index}. ${cyan(item.name)}`)
+      console.log(cyan(`    ${index + 1}. ${item.name}`))
     }
   )
 }

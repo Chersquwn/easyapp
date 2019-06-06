@@ -16,13 +16,18 @@ const chalk_1 = __importDefault(require("chalk"));
 const { cyan } = chalk_1.default;
 function list() {
     return __awaiter(this, void 0, void 0, function* () {
-        const { data } = yield request_promise_native_1.default.get('https://api.github.com/users/yokiyokiyoki/repos');
-        const list = data.filter((item) => __awaiter(this, void 0, void 0, function* () { return item.name.includes('easyapp-template'); }));
+        const data = yield request_promise_native_1.default.get('https://api.github.com/users/Chersquwn/repos', {
+            headers: {
+                'User-Agent': 'Awesome-Octocat-App'
+            },
+            json: true
+        });
+        const list = data.filter((item) => item.name.includes('easyapp-template'));
         console.log();
-        console.log(`Easyapp has ${list.length} templates: `);
+        console.log(`easyapp has ${cyan(list.length)} templates: `);
         console.log();
         list.forEach((item, index) => {
-            console.log(`${index}. ${cyan(item.name)}`);
+            console.log(cyan(`    ${index + 1}. ${item.name}`));
         });
     });
 }
