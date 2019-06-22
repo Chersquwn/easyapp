@@ -1,6 +1,6 @@
 {
   "name": "@chersquwn/easyapp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A quick cli for create project",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

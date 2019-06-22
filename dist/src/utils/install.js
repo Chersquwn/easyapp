@@ -26,6 +26,7 @@ function install(name) {
         const args = [];
         yield npm_check_updates_1.default.run({
             jsonUpgraded: true,
+            upgrade: true,
             packageManager: 'npm',
             silent: true,
             packageFile: `./${name}/package.json`
