@@ -15,6 +15,7 @@ export default async function install(name: string): Promise<void> {
 
   await ncu.run({
     jsonUpgraded: true,
+    upgrade: true,
     packageManager: 'npm',
     silent: true,
     packageFile: `./${name}/package.json`
